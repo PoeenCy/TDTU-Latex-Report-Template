@@ -1,7 +1,5 @@
 # Mẫu Báo cáo LaTeX - Đại học Tôn Đức Thắng (TDTU)
 
-Đây là một mẫu (template) LaTeX được xây dựng để soạn thảo các bài báo cáo, đồ án, tiểu luận hoặc khóa luận tốt nghiệp theo định dạng chung của Trường Đại học Tôn Đức Thắng.
-
 Mẫu template này được mình tạo ra nhằm giúp các bạn tiết kiệm thời gian định dạng và tập trung hơn vào nội dung học thuật.
 
 ## ✨ Tính năng mình đã triển khai
@@ -58,5 +56,6 @@ Tất cả các định dạng về font chữ, lề, giãn dòng, tiêu đề, 
 
 Chúc bạn có những bài báo cáo thật chuyên nghiệp!
 Nếu bạn thấy dự án hữu ích, mình rất mong nhận được một ⭐️ hoặc fork để có thêm động lực hoàn thiện và phát triển hơn nữa.
+
 
 
