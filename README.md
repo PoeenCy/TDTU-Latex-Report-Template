@@ -2,9 +2,9 @@
 
 Đây là một mẫu (template) LaTeX được xây dựng để soạn thảo các bài báo cáo, đồ án, tiểu luận hoặc khóa luận tốt nghiệp theo định dạng chung của Trường Đại học Tôn Đức Thắng.
 
-Mẫu template này được tạo ra nhằm giúp sinh viên tiết kiệm thời gian định dạng và tập trung hơn vào nội dung học thuật.
+Mẫu template này được mình tạo ra nhằm giúp các bạn tiết kiệm thời gian định dạng và tập trung hơn vào nội dung học thuật.
 
-## ✨ Tính năng nổi bật
+## ✨ Tính năng mình đã triển khai
 
 -   **Cấu trúc rõ ràng:** Phân chia tài liệu thành các thư mục `frontmatter`, `backmatter` giúp quản lý file dễ dàng.
 -   **Định dạng chuẩn:** Đã thiết lập sẵn các thông số theo yêu cầu chung về báo cáo:
@@ -15,18 +15,6 @@ Mẫu template này được tạo ra nhằm giúp sinh viên tiết kiệm th�
 -   **Tự động hóa:** Tự động tạo trang bìa, mục lục, danh mục hình ảnh, danh mục bảng biểu.
 -   **Hỗ trợ tiếng Việt:** Cấu hình sẵn `vietnam` package để gõ tiếng Việt hoàn chỉnh.
 -   **Dễ dàng tùy chỉnh:** Mọi thiết lập định dạng chung được tập trung tại file `preamble.tex`, giúp người dùng dễ dàng thay đổi theo yêu cầu của từng môn học hoặc giảng viên.
-
-## 🚀 Yêu cầu
-
-Để sử dụng template này, bạn cần cài đặt một bản phân phối LaTeX trên máy tính của mình:
--   **Windows:** [MiKTeX](https://miktex.org/download)
--   **MacOS:** [MacTeX](https://www.tug.org/mactex/)
--   **Linux:** [TeX Live](https://www.tug.org/texlive/)
-
-Và một trình soạn thảo LaTeX:
--   [Visual Studio Code](https://code.visualstudio.com/) với extension [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
--   [TeXstudio](https://www.texstudio.org/).
--   Hoặc sử dụng trên nền tảng online như [Overleaf](https://www.overleaf.com/).
 
 ## 📁 Cấu trúc Thư mục
 
@@ -46,9 +34,9 @@ Và một trình soạn thảo LaTeX:
     └── references.tex      # Tài liệu tham khảo
 ```
 
-## 📝 Hướng dẫn Sử dụng
+## 📝 Hướng dẫn Sử dụng trên Overleaf
 
-1.  **Tải template:** Tải về và giải nén template này vào một thư mục trên máy tính của bạn.
+1.  **Tải template:** Tải về thư mục `.zip` và tải lên trên dự án (Project) mới của bạn trên Overleaf.
 2.  **Chỉnh sửa thông tin cơ bản:**
     -   Mở file `frontmatter/titlepage.tex` và điền thông tin của bạn (Tên đề tài, sinh viên thực hiện, giảng viên, năm...).
     -   Viết nội dung cho các file `declaration.tex`, `acknowledgment.tex`, `abstract.tex`.
@@ -69,3 +57,5 @@ Tất cả các định dạng về font chữ, lề, giãn dòng, tiêu đề, 
 ---
 
 Chúc bạn có những bài báo cáo thật chuyên nghiệp!
+Nếu bạn thấy dự án hữu ích, mình rất mong nhận được một ⭐️ hoặc fork để có thêm động lực hoàn thiện và phát triển hơn nữa.
+
