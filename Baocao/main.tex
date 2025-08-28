@@ -1,0 +1,50 @@
+\documentclass[a4paper]{report}
+\input{preamble.tex}
+
+\begin{document}
+\normalsize
+
+% --- FRONTMATTER ---
+\input{frontmatter/titlepage.tex}
+\clearpage
+
+% Đánh số La Mã cho phần mở đầu
+\pagenumbering{roman}
+\setcounter{page}{3}
+
+\input{frontmatter/acknowledgment.tex}
+\clearpage
+
+\input{frontmatter/declaration.tex}
+\clearpage
+
+\input{frontmatter/abstract.tex}
+\clearpage
+
+% --- MỤC LỤC VÀ DANH MỤC ---
+% Tùy chỉnh tiêu đề mục lục
+\renewcommand{\contentsname}{\centerline{\normalfont\selectfont\bfseries\headingone{MỤC LỤC}}}
+\tableofcontents
+\clearpage
+
+% Danh mục hình ảnh và bảng (dùng lệnh đã chuẩn hoá)
+% \PrintListOfFigures
+% \addcontentsline{toc}{section}{DANH MỤC HÌNH ẢNH}
+% \clearpage
+
+% \PrintListOfTables
+% \addcontentsline{toc}{section}{DANH MỤC BẢNG BIỂU}
+% \clearpage
+
+% --- BẮT ĐẦU NỘI DUNG CHÍNH ---
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% --- CONTENT ---
+\input{content/01_gioi_thieu_chung.tex}
+\clearpage
+
+% --- BACKMATTER ---
+\input{backmatter/references.tex}
+
+\end{document}

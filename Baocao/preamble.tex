@@ -1,0 +1,144 @@
+\usepackage[utf8]{vietnam}
+\usepackage{lmodern}
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{tocloft}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{indentfirst}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{soul}
+\usepackage{courier}
+\usepackage{titlesec}
+\usepackage{etoolbox}
+\usepackage{adjustbox}
+\usepackage{fancyvrb}
+\hypersetup{hidelinks} % Ẩn khung và màu của liên kết
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{longtable}
+\usepackage{ragged2e} % Cung cấp \justifying
+\usepackage{listings}
+
+% =====================
+% Thiết lập định dạng CHUNG cho báo cáo 
+% Thay đổi ở đây sẽ áp dụng cho toàn bộ tài liệu
+% =====================
+
+% 1) Khổ giấy, lề trang
+\geometry{top=3.5cm, bottom=3cm, left=3.5cm, right=2cm}
+
+% 2) Cỡ chữ mặc định, giãn dòng, thụt đầu dòng
+\renewcommand{\normalsize}{\fontsize{13}{15.6}\selectfont}
+\linespread{1.5}
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0.25cm} 
+
+% 3) Đánh số hình, bảng theo chương/section nếu muốn
+\numberwithin{figure}{section}
+% \numberwithin{table}{section} % bật nếu cần
+
+% 4) Header/Footer và số trang
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% 5) Mức độ đánh số và mục lục
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+% 6) Danh sách (list) căn lề, khoảng cách
+\setlist[itemize]{align=parleft, leftmargin=, labelsep=0.5em, itemsep=0.5em}
+\setlist[enumerate]{align=parleft, leftmargin=, labelsep=0.5em, itemsep=0.5em}
+
+% 7) Tiêu đề các cấp (chapter/section/...) và khoảng cách
+\titleformat{\chapter}[display]
+{\normalfont\Large\bfseries\filcenter}
+{\MakeUppercase{CHƯƠNG \thechapter.}}
+{0pt}
+{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-20pt}{20pt}
+
+\titleformat{\section}
+{\normalfont\fontsize{14pt}{16.8pt}\selectfont\bfseries}
+{\thesection.}
+{0.5em}
+{}
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\titleformat{\subsection}
+{\normalfont\fontsize{14pt}{16.8pt}\selectfont\bfseries\itshape}
+{\thesubsection.}
+{0.5em}
+{}
+\titlespacing*{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subsubsection}
+{\normalfont\fontsize{14pt}{16.8pt}\selectfont}
+{\thesubsubsection.}
+{0.5em}
+{}
+\titlespacing*{\subsubsection}{0pt}{3ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+% 8) Mục lục, danh mục hình/bảng
+% --- Định dạng cho TẤT CẢ các cấp ---
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} 
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+
+% --- Định dạng cho cấp CHƯƠNG (Chapter) và các mục tương đương ---
+\renewcommand{\cftchapfont}{\bfseries}      
+\renewcommand{\cftchappagefont}{\bfseries} 
+\renewcommand{\cftchappresnum}{CHƯƠNG } 
+\renewcommand{\cftchapaftersnum}{.}
+\setlength{\cftchapnumwidth}{2.75cm}
+
+% --- Định dạng cho cấp MỤC (Section) và MỤC CON (Subsection) ---
+\setlength{\cftsecindent}{0pt}
+\setlength{\cftsubsecindent}{0pt}
+\setlength{\cftsecnumwidth}{1cm}
+\setlength{\cftsubsecnumwidth}{1cm}
+
+% --- Tên và tiêu đề các danh mục ---
+\renewcommand{\listtablename}{DANH MỤC BẢNG BIỂU}
+\renewcommand{\listfigurename}{DANH MỤC HÌNH ẢNH}
+\newcommand{\ReportLargeCentered}[1]{\centerline{\normalfont\fontsize{16}{19.2}\selectfont\bfseries #1}}
+\renewcommand{\contentsname}{\ReportLargeCentered{MỤC LỤC}}
+\newcommand{\ReportListOfFiguresTitle}{\ReportLargeCentered{DANH MỤC HÌNH ẢNH}}
+\newcommand{\ReportListOfTablesTitle}{\ReportLargeCentered{DANH MỤC BẢNG BIỂU}}
+
+% --- Khoảng cách trước/sau tiêu đề các danh mục ---
+\setlength{\cftbeforetoctitleskip}{-20pt}
+\setlength{\cftaftertoctitleskip}{20pt}
+\setlength{\cftbeforeloftitleskip}{-20pt}
+\setlength{\cftafterloftitleskip}{20pt}
+\setlength{\cftbeforelottitleskip}{-20pt}
+\setlength{\cftafterlottitleskip}{20pt}
+% 9) Chú thích hình/bảng
+\captionsetup[table]{position=top, skip=0pt, font=normalsize, labelfont=bf}
+\captionsetup[figure]{position=bottom, skip=10pt, font=normalsize, labelfont=bf}
+
+% 10) Tiện ích: lệnh in tiêu đề danh mục theo chuẩn đã định nghĩa
+\newcommand{\PrintListOfFigures}{%
+\renewcommand{\listfigurename}{\ReportListOfFiguresTitle}%
+\listoffigures
+}
+
+% =====================
+% Định nghĩa lệnh tùy chỉnh cho tiêu đề
+\newcommand{\headingone}[1]{
+  {\noindent\fontsize{16pt}{16.5pt}\selectfont \bfseries #1}
+}
+
+% =====================
+% HẾT cấu hình chung và bổ sung
+% =====================
